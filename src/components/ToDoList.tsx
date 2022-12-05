@@ -4,6 +4,7 @@ import { Categories, categoryState, isDarkAtom, toDoSelector, toDoState } from "
 import CreateToDo from "./CreateToDo";
 import ToDo from "./ToDo";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
   display: flex;
@@ -74,6 +75,9 @@ function ToDoList() {
   console.log(category);
   return (
     <Container>
+      <Helmet>
+        <title>To Do List</title>
+      </Helmet>
       <Content>
         <Title>To Do</Title>
         <ThemeBtn onClick={toggleDarkAtom}>
